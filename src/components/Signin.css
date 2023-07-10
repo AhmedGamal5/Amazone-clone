@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.signinlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imglogo {
+  height: 35px;
+  width: 120px;
+  margin: 20px 35px;
+}
+.signinform {
+  width: 320px;
+  height: 350px;
+  margin: auto;
+  padding: auto;
+  background-color: rgba(255, 252, 252, 0.719);  
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.651);
+}
+.signinform h1 {
+  font-size: 30px;
+  text-align: center; 
+  font-weight: bold;
+  margin: 10px 0;
+}
+.signinform h3 {
+  font-size: 15px;
+  margin: 2px 0px;
+  margin-top: 10px;
+}
+.inputkind {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #777777;
+  outline: none;
+  padding: 5px;
+}
+.btnsubmit {
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(219, 154, 12);
+  border: 1px solid rgb(216, 125, 125);
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 630;
+  color: rgb(39, 39, 38);
+}
+.btnsubmit:hover {  
+  border: 1px solid rgb(186, 188, 189);  
+}
+.signinform p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.btnsubmit2 {
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid darkgray;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.btnsubmit2:hover {  
+  border: 1px solid rgb(104, 104, 104);  
+}
+
+@media only screen and (max-width: 390px) {
+  .imglogo {
+    height: 30px;
+    width: 90px;
+  }
+  .signinform {
+    width: 200px !important;
+    height: 350px;
+  }
+  .signup {
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .imglogo {
+    height: 30px;
+    width: 100px;
+  }
+  .signinform {
+    width: 250px;
+    height: 350px;
+  }
+  .signup {
+    font-size: small;
+  }
+}
