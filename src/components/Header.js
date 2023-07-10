@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import { BiSearch } from "react-icons/bi";
 import { RiShoppingCartFill } from "react-icons/ri";
@@ -10,11 +10,11 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useAuth } from "../Context/Globalstate";
-import {auth} from "../firebase";
+import { auth } from "../firebase";
 
 const Header = () => {
-  const {user, basket} = useAuth();
-  const handleauth =()=>{
+  const { user, basket } = useAuth();
+  const handleauth = () => {
     auth.signOut();
   };
   return (
@@ -47,7 +47,7 @@ const Header = () => {
               <h6>Hello, {user ? `${user.email}` : "Guest"}</h6>
               <h5> {user ? "Sign Out" : "Sign In"}</h5>
             </NavLink>
-            <NavLink to={"/orders"} className="signin">
+            <NavLink to={"#"} className="signin">
               <h6>Returns</h6>
               <h5>&Orders</h5>
             </NavLink>
@@ -55,13 +55,15 @@ const Header = () => {
               <h6>Your</h6>
               <h5>Prime</h5>
             </NavLink>
-            <NavLink to={"/Checkout"}  className="cart">  
-              <span className="carticon"><RiShoppingCartFill/></span>
+            <NavLink to={"/Checkout"} className="cart">
+              <span className="carticon">
+                <RiShoppingCartFill />
+              </span>
               <span className="cartcount"> {basket?.length}</span>
-            </NavLink>          
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>     
+      </Navbar>
     </>
   );
 };
